@@ -1,0 +1,17 @@
+<div *ngIf="product" class="card-product">
+  <div class="card-images">
+    <a class="card-img-hover" href="#">
+      <img
+        [src]="img"
+        [alt]="product.title"
+        [class]="i === 0 ? 'img-front' : 'img-back'"
+        *ngFor="let img of product.images; index as i"
+      />
+    </a>
+  </div>
+  <div class="card-describe">
+    <h6 class="category">{{ product.category }}</h6>
+    <h5 class="title">{{ product.title }}</h5>
+    <h4 class="price">{{ product.price | currency: "BRL" }}</h4>
+  </div>
+</div>

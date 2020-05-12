@@ -1,0 +1,10 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" *ngIf="category !== 'all'">
+      <a [routerLink]="['/', 'shop', 'all']">All Products</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      {{ category === "all" ? "All Products /" : category }}
+    </li>
+  </ol>
+</nav>

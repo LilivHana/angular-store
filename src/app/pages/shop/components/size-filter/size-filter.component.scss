@@ -1,0 +1,35 @@
+.size-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem 0 1rem;
+
+  .btn-size {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 3rem;
+    height: 3rem;
+    color: var(--gray);
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--white);
+    margin: 0.4rem;
+    border: solid 0.06rem var(--gray-ligth-200);
+    border-radius: 0.4rem;
+    &[disabled] {
+      text-decoration: line-through;
+      background-color: var(--gray-ligth-100);
+    }
+    &:focus {
+      box-shadow: none !important;
+    }
+    &.active {
+      border-color: var(--black);
+      color: var(--black);
+    }
+  }
+}

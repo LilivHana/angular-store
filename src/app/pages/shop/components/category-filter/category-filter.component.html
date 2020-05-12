@@ -1,0 +1,12 @@
+<nav class="nav-category">
+  <a [routerLink]="['/', 'shop', 'all']" routerLinkActive="active">
+    All Products
+  </a>
+  <a
+    [routerLink]="['/', 'shop', item.category]"
+    routerLinkActive="active"
+    *ngFor="let item of categories"
+  >
+    {{ item.name }}
+  </a>
+</nav>

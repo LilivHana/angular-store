@@ -1,0 +1,8 @@
+<section class="category" *ngIf="category">
+  <img [src]="category.img" [alt]="category.name" class="img-fluid" />
+  <div class="category-wrap">
+    <a [routerLink]="['/', 'shop', category.category]">
+      {{ category.name }}
+    </a>
+  </div>
+</section>

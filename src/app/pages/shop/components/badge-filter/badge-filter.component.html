@@ -1,0 +1,12 @@
+<section class="container-badge-filter">
+  <button type="button" class="btn btn-badge" *ngFor="let item of filters">
+    {{ item.label }}
+    <span
+      class="badge"
+      (click)="removeFilter(item)"
+      *ngIf="item.category !== 'navegation'"
+    >
+      <i class="fas fa-times"></i>
+    </span>
+  </button>
+</section>

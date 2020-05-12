@@ -1,0 +1,27 @@
+<section class="price-wrap">
+  <form [formGroup]="priceForm" class="price-form">
+    <app-checkbox [id]="price.min" *ngFor="let price of prices">
+      <span class="content-label">
+        {{ price.min | currency: "BRL" }} - {{ price.max | currency: "BRL" }}
+      </span>
+    </app-checkbox>
+
+    <div class="price-inputs">
+      <input
+        formControlName="min"
+        type="number"
+        class="form-control"
+        placeholder="$10.00"
+        (change)="onPrice()"
+      />
+      <span> - </span>
+      <input
+        formControlName="max"
+        type="number"
+        class="form-control"
+        placeholder="$350.00"
+        (change)="onPrice()"
+      />
+    </div>
+  </form>
+</section>

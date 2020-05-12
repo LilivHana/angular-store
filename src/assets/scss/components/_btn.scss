@@ -1,0 +1,10 @@
+.btn {
+  border-radius: 0 !important;
+  &-outline-dark {
+    color: var(--black);
+    &:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+}

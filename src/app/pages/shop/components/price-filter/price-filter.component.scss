@@ -1,0 +1,21 @@
+$label-left: 2.2rem;
+
+.price-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem 0 1rem;
+
+  .price-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.4rem;
+    span {
+      color: var(--gray);
+      padding: 0.5rem;
+    }
+  }
+}

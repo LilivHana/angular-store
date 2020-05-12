@@ -1,0 +1,10 @@
+<div class="custom-control custom-checkbox store-checkbox">
+  <input
+    type="checkbox"
+    class="custom-control-input"
+    [id]="'store-check-' + id"
+  />
+  <label class="custom-control-label" [for]="'store-check-' + id">
+    <ng-content select=".content-label"></ng-content>
+  </label>
+</div>

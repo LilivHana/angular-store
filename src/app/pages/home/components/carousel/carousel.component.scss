@@ -1,0 +1,59 @@
+.carousel {
+  outline: none;
+
+  &-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 32rem;
+
+    &.img-cover {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .darkness {
+      width: 100%;
+      height: 32rem;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 32rem;
+
+        h1,
+        h1 small,
+        a,
+        a.btn {
+          text-transform: uppercase;
+        }
+
+        h1 {
+          font-size: 3rem;
+          font-weight: 200;
+          color: var(--white);
+          padding-bottom: 2rem;
+          small {
+            display: block;
+            font-weight: bold;
+            padding-bottom: 0.4rem;
+            font-size: 1rem;
+          }
+        }
+
+        a {
+          &.btn {
+            border-radius: 0;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

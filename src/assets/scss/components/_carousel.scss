@@ -1,0 +1,9 @@
+.carousel {
+  .carousel-item {
+    outline: none;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+$label-checkbox-left: 2.2rem;
+
+.store-checkbox {
+  padding: 0.4rem 0 0.4rem $label-checkbox-left;
+
+  .custom-control-input {
+    &:focus {
+      & ~ .custom-control-label::before {
+        box-shadow: none !important;
+      }
+    }
+    &[type="checkbox"] {
+      &:checked ~ .custom-control-label {
+        color: var(--black);
+
+        &::before {
+          background-color: var(--black);
+          border-color: var(--black);
+        }
+      }
+    }
+  }
+
+  .custom-control-label {
+    font-size: 0.9rem;
+    font-weight: 200;
+    color: var(--gray);
+    &::before,
+    &::after {
+      outline: none;
+      top: 0.15rem;
+      width: 1.128rem;
+      height: 1.128rem;
+      left: -$label-checkbox-left;
+    }
+    &::before {
+      border-radius: 0;
+      opacity: 0.9;
+      border-color: var(--gray-ligth-200);
+      background-color: var(--gray-ligth-200);
+    }
+  }
+}

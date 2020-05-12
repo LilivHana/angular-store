@@ -1,0 +1,44 @@
+nav {
+  &.navbar-store {
+    border-bottom: 1px solid #ccc;
+    height: $nav-store-height;
+
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: var(--dark);
+    }
+
+    .nav {
+      &-store {
+        // background-color: red;
+        li {
+          &:first-of-type {
+            margin-left: 1rem;
+          }
+          margin-right: 0.5rem;
+          a {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            border-bottom: solid 0.2rem transparent;
+
+            &:hover {
+              color: var(--dark);
+              border-color: var(--light);
+            }
+            &.active {
+              color: var(--black);
+              border-color: var(--dark);
+            }
+          }
+        }
+      }
+      &-tools {
+        // background-color: blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.form-control {
+  border-color: var(--gray-ligth-200);
+  border-radius: 0;
+  color: var(--black);
+  &:focus {
+    border-color: var(--black);
+    box-shadow: none;
+  }
+}
+
+select {
+  &.form-control {
+    padding: 0.4rem 0.6rem;
+  }
+}

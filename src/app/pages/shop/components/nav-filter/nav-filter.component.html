@@ -1,0 +1,67 @@
+<section>
+  <section class="category">
+    <button
+      type="button"
+      class="btn btn-link btn-toggle"
+      (click)="toggleCategory = !toggleCategory"
+      [attr.aria-expanded]="!toggleCategory"
+      aria-controls="collapseCategory"
+    >
+      <span class="title">Category</span>
+      <i
+        class="fas"
+        [ngClass]="{
+          'fa-angle-down': toggleCategory,
+          'fa-angle-up': !toggleCategory
+        }"
+      ></i>
+    </button>
+    <div id="collapseCategory" class="wrap" [ngbCollapse]="toggleCategory">
+      <app-category-filter></app-category-filter>
+    </div>
+  </section>
+
+  <section class="size">
+    <button
+      type="button"
+      class="btn btn-link btn-toggle"
+      (click)="toggleSize = !toggleSize"
+      [attr.aria-expanded]="!toggleSize"
+      aria-controls="collapseSize"
+    >
+      <span>Size</span>
+      <i
+        class="fas"
+        [ngClass]="{
+          'fa-angle-down': !toggleSize,
+          'fa-angle-up': toggleSize
+        }"
+      ></i>
+    </button>
+    <div id="collapseSize" class="wrap" [ngbCollapse]="!toggleSize">
+      <app-size-filter></app-size-filter>
+    </div>
+  </section>
+
+  <section class="price">
+    <button
+      type="button"
+      class="btn btn-link btn-toggle"
+      (click)="togglePrice = !togglePrice"
+      [attr.aria-expanded]="!togglePrice"
+      aria-controls="collapsePrice"
+    >
+      <span>Price</span>
+      <i
+        class="fas"
+        [ngClass]="{
+          'fa-angle-down': !togglePrice,
+          'fa-angle-up': togglePrice
+        }"
+      ></i>
+    </button>
+    <div id="collapsePrice" class="wrap" [ngbCollapse]="!togglePrice">
+      <app-price-filter></app-price-filter>
+    </div>
+  </section>
+</section>

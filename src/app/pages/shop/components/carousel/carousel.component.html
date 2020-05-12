@@ -1,0 +1,64 @@
+<section
+  class="container-carousel mb-5"
+  [ngClass]="{ show: showCarousel, hidden: !showCarousel }"
+>
+  <ngb-carousel *ngIf="banners && banners.length > 0">
+    <ng-template ngbSlide *ngFor="let banner of banners">
+      <section
+        *ngIf="banner.template === 'summer'"
+        [class]="'carousel-section ' + banner.template"
+      >
+        <div class="carousel-summer-wrap">
+          <h2>{{ banner.title }}</h2>
+          <a class="btn btn-summer" [routerLink]="[banner.link.path]">
+            {{ banner.link.description }}
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div
+          class="carousel-summer-img"
+          [style.backgroundImage]="'url(' + banner.img + ')'"
+        ></div>
+      </section>
+
+      <section
+        *ngIf="banner.template === 'collection'"
+        [class]="'carousel-section ' + banner.template"
+        [style.backgroundImage]="'url(' + banner.img + ')'"
+      >
+        <div class="carousel-collection-wrap">
+          <h1>{{ banner.title }}</h1>
+          <p>
+            {{ banner.subtitle }}
+            <b>{{ banner.description }}</b>
+          </p>
+          <a
+            class="btn btn-outline-dark btn-collection"
+            [routerLink]="[banner.link.path]"
+          >
+            <span>
+              <span class="text">{{ banner.link.description }}</span>
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section
+        *ngIf="banner.template === 'extra'"
+        [class]="'carousel-section ' + banner.template"
+        [style.backgroundImage]="'url(' + banner.img + ')'"
+      >
+        <div class="carousel-extra-wrap">
+          <h3>{{ banner.title }}</h3>
+          <h1>
+            {{ banner.subtitle }}
+          </h1>
+          <a class="btn btn-extra" [routerLink]="[banner.link.path]">
+            {{ banner.link.description }}
+          </a>
+        </div>
+      </section>
+    </ng-template>
+  </ngb-carousel>
+</section>

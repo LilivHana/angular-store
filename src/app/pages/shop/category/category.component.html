@@ -1,0 +1,18 @@
+<app-carousel></app-carousel>
+<section class="container-category">
+  <div class="header">
+    <div class="box">
+      <h1>{{ category === "all" ? "Home" : category }}</h1>
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+    <div class="box">
+      <select class="form-control">
+        <option value="all">Most popular</option>
+      </select>
+    </div>
+  </div>
+  <app-badge-filter></app-badge-filter>
+
+  <app-product-grid></app-product-grid>
+</section>
+<!-- <h1>{{ category }}</h1> -->

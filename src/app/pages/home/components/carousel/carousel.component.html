@@ -1,0 +1,27 @@
+<ngb-carousel *ngIf="banners">
+  <ng-template ngbSlide *ngFor="let banner of banners">
+    <section
+      class="carousel-section img-cover"
+      [style.backgroundImage]="'url(' + banner.img + ')'"
+    >
+      <div class="darkness">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <h1>
+                <small>{{ banner.describe.subtitle }}</small>
+                {{ banner.describe.title }}
+              </h1>
+              <a
+                [routerLink]="['/', 'shop', banner.category]"
+                class="btn btn-dark btn-lg"
+              >
+                View {{ banner.category }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-template>
+</ngb-carousel>

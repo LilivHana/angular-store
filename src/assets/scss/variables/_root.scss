@@ -1,0 +1,32 @@
+// ================
+// BOOTSTRAP
+// ================
+// $breadcrumb-divider: quote(">");
+
+// ================
+// NAVBAR
+// ================
+$nav-store-height: 4.4rem !default;
+
+// ================
+// COLOR
+// ================
+$gray-ligth-100: #f5f5f5;
+$gray-ligth-200: #ddd;
+
+$gray-ligth-400: #909090 !important;
+
+// ================
+// ROOT
+// ================
+:root {
+  --white: #fff;
+  --black: #000;
+  --gray-ligth-100: #{$gray-ligth-100};
+  --gray-ligth-200: #{$gray-ligth-200};
+  --gray-ligth-400: #{$gray-ligth-400};
+
+  --height-page: calc(100vh - #{$nav-store-height});
+
+  --font-signika: #{$font-signika};
+}

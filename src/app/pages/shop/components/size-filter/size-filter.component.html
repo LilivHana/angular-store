@@ -1,0 +1,15 @@
+<section class="size-wrap">
+  <button
+    class="btn btn-size"
+    [ngClass]="{ active: item.active }"
+    [disabled]="item.enabled"
+    *ngFor="let item of sizes"
+    (click)="activeSize(item)"
+  >
+    {{ item.title }}
+  </button>
+
+  <button class="btn btn-size" *ngIf="!sizes || sizes.length === 0">
+    Empty list
+  </button>
+</section>
