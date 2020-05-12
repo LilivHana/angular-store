@@ -51,6 +51,11 @@
   }
 
   .card-describe {
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+    }
     .category {
       font-weight: 400;
       color: var(--gray-ligth-400);
